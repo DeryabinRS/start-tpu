@@ -1,0 +1,19 @@
+.sky{
+    position: absolute;
+    background-image: url("./../../img/sky.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 150%;
+    height: 150%;
+    /* animation: animatedBackground 60s linear infinite; */
+}
+
+/* @keyframes animatedBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -1920px 0; 
+    }
+} */

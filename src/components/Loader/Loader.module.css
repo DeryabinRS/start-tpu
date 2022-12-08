@@ -1,0 +1,97 @@
+.preloader_page {
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100vw;
+	height: 300px;
+    background-color: #fff;
+    transition: opacity 1s ease;
+}
+
+.preloader{
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:101;
+  display:block;
+  width:100vw;
+  height:100vh;
+  background-color:#fff;
+  transition:opacity 1s ease
+}
+
+.preloader._hide{opacity:0;pointer-events:none}
+.preloader__img{position:absolute;top:calc(50% - 3.2rem);left:calc(50% - 3.2rem);display:block;width:6.4rem;height:6.4rem}
+.preloader__img span{position:absolute;top:0;display:block;width:2rem;background-color:#80bf44;transform-origin:top}
+.preloader__img span::after{
+	position:absolute;
+	top:0;left:0;
+	display:block;
+	width:100%;
+	height:100%;
+	background-color:#fff;
+	transform-origin:top;
+	animation:prhide 1.3s linear 0s infinite;
+	transform:scaleY(0);
+	content:''
+}
+
+.preloader__img span:nth-child(4),
+.preloader__img span:nth-child(5),
+.preloader__img span:nth-child(6){top:auto;bottom:0;background-color:#2c2c2c}
+.preloader__img span:nth-child(1),.preloader__img span:nth-child(4){left:0}
+.preloader__img span:nth-child(3),.preloader__img span:nth-child(6){right:0}
+.preloader__img span:nth-child(2),.preloader__img span:nth-child(5){left:2.2rem}
+
+.preloader__img span:nth-child(1),
+.preloader__img span:nth-child(3),
+.preloader__img span:nth-child(5){height:2rem}
+
+.preloader__img span:nth-child(2),
+.preloader__img span:nth-child(4),
+.preloader__img span:nth-child(6){height:4.2rem}
+
+.preloader__img span:nth-child(1){animation:pr 1.3s linear 0s infinite}
+.preloader__img span:nth-child(2){animation:pr2 1.3s linear 0s infinite}
+.preloader__img span:nth-child(3){animation:pr 1.3s linear 0s infinite}
+.preloader__img span:nth-child(4){animation:pr2 1.3s linear 0s infinite}
+.preloader__img span:nth-child(5){animation:pr 1.3s linear 0s infinite}
+.preloader__img span:nth-child(6){animation:pr 1.3s linear 0s infinite}
+
+.preloader__img span:nth-child(2)::after,
+.preloader__img span:nth-child(4)::after{animation:pr2hide 1.3s linear 0s infinite}
+
+@keyframes pr{
+  0%{transform:scaleY(0)}
+  30%{transform:scaleY(1)}
+  80%{transform:scaleY(1)}
+  80.1%{transform:scaleY(0)}
+  100%{transform:scaleY(0)}
+}
+
+@keyframes prhide{
+  0%{transform:scaleY(0)}
+  30%{transform:scaleY(0)}
+  60%{transform:scaleY(0)}
+  80%{transform:scaleY(1)}
+  80.1%{transform:scaleY(0)}
+  100%{transform:scaleY(0)}
+}
+
+@keyframes pr2{
+  0%{transform:scaleY(0)}
+  50%{transform:scaleY(1)}
+  60%{transform:scaleY(1)}
+  80%{transform:scaleY(1)}
+  80.1%{transform:scaleY(0)}
+  100%{transform:scaleY(0)}
+}
+
+@keyframes pr2hide{
+  0%{transform:scaleY(0)}
+  50%{transform:scaleY(0)}
+  70%{transform:scaleY(0)}
+  80%{transform:scaleY(1)}
+  80.1%{transform:scaleY(0)}
+  100%{transform:scaleY(0)}
+}
